@@ -19,10 +19,10 @@ class ValidationUserModelTest extends TestCase {
 
 	public function testInvalidWithoutUniqueEmail()
 	{
-		//$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
-		//$user->save();
+		$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
+		$user->save();
 
-		//$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
-		//$this->assertFalse($user->validate());		
+		$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
+		$this->assertFalse($user->validate());		
 	}
 }
