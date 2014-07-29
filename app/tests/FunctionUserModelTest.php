@@ -17,4 +17,10 @@ class FunctionUserModelTest extends TestCase {
 		$this->assertEquals('Janez',$user->getName());
 	}
 
+	public function testGetEmailDomain()
+	{
+		$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
+		$this->assertEquals('gmail.com',$user->getEmailDomain());
+	}
+
 }
