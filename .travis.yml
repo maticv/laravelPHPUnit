@@ -7,6 +7,3 @@ php:
 before_script:
 - composer install --dev --prefer-source --no-interaction
 - mysql -e 'drop database IF EXISTS myapp_test;'
-- mysql -e 'create database myapp_test;'
-
-script: phpunit
