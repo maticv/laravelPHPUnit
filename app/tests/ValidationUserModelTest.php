@@ -21,8 +21,6 @@ class ValidationUserModelTest extends TestCase {
 	{
 		$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
 		$user->save();
-
-		$user = Factory::user(array('email' => 'matic.volk@gmail.com'));
 		$this->assertFalse($user->validate());		
 	}
 }

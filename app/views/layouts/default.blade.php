@@ -11,23 +11,26 @@
 		<title>
 			@yield('title')
 		</title>
-
-	{{ HTML::style('packages/bootstrap/css/bootstrap.css') }}
-	{{ HTML::style('packages/bootstrap/css/bootstrap-theme.css') }}
-	{{ HTML::style('packages/bootstrap/css/bootstrap-theme.min.css') }}
-	{{ HTML::style('packages/bootstrap/css/bootstrap.min.css') }}
-	{{ HTML::script('packages/bootstrap/js/tests/vendor/jquery.min.js') }}
+	{{ HTML::style('css/bootstrap-responsive.min.css') }}
+	{{ HTML::style('css/bootstrap-responsive.css') }}
+	{{ HTML::style('css/bootstrap.css') }}
+	{{ HTML::style('css/bootstrap-theme.min.css') }}
+	{{ HTML::style('css/bootstrap.min.css') }}
+	{{ HTML::script('js/bootstrap.js') }}
+	{{ HTML::script('js/bootstrap.min.js') }}
+	{{ HTML::script('js/jquery-1.10.2.min.js') }}
 	
 	    @yield('assets')
 		
 	</head>
     <body>
     <header>
-    	<h1>
-			@yield('title')
-		</h1>
     </header>
         <div class="container">
+        
+        <h1>
+			@yield('title')
+		</h1>
         	@if (Session::get( 'success'))
 			<p>{{ Session::get( 'success') }}</p>
 			@endif

@@ -37,4 +37,9 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	{
 		$this->name = $name;
 	}
+
+	public function getEmailDomain($email)
+	{
+		
+	}
 }
