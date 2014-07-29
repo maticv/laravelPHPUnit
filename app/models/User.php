@@ -28,8 +28,13 @@ class User extends BaseModel implements UserInterface, RemindableInterface {
 	 */
 	protected $hidden = array('password');
 
-	public function getEmail()
+	public function getName()
 	{
-		return $this->email;
+		return $this->name;
+	}
+
+	public function setName($name)
+	{
+		$this->name = $name;
 	}
 }
