@@ -11,7 +11,7 @@
 		<title>
 			@yield('title')
 		</title>
-	 {{ HTML::style('css/bootstrap-responsive.min.css') }}
+	{{ HTML::style('css/bootstrap-responsive.min.css') }}
 	{{ HTML::style('css/bootstrap-responsive.css') }}
 	{{ HTML::style('css/bootstrap.css') }}
 	{{ HTML::style('css/bootstrap-theme.min.css') }}
@@ -25,6 +25,21 @@
 	</head>
     <body>
     <header>
+    <nav>
+			 {{ Navbar::create()
+			    ->with_brand('Laravel testing', URL::to('login'))
+			    ->with_menus(
+			        Navigation::links(
+			        [
+						['Home',URL::to('hello')],
+						['Hfsf',URL::to('hello')],
+						['Home',URL::to('hello')]
+					]
+					),
+					['style' => 'height: auto']
+				);
+	   	 	}}
+		</nav>
     </header>
         <div class="container">
         
