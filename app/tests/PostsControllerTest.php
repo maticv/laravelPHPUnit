@@ -10,6 +10,7 @@ class PostsControllerTest extends TestCase {
 
 	public function testRedirectLogin()
 	{
+		$this->call('GET', 'login');
 		$this->call('POST','login');
 		$this->assertRedirectedTo('login');		
 	}
