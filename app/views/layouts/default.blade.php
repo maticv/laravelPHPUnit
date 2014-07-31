@@ -11,7 +11,7 @@
 		<title>
 			@yield('title')
 		</title>
-	 {{ HTML::style('css/bootstrap-responsive.min.css') }}
+	{{ HTML::style('css/bootstrap-responsive.min.css') }}
 	{{ HTML::style('css/bootstrap-responsive.css') }}
 	{{ HTML::style('css/bootstrap.css') }}
 	{{ HTML::style('css/bootstrap-theme.min.css') }}

@@ -2,12 +2,16 @@
 
 class PostsControllerTest extends TestCase {
 	
-	public function testIndex()
+	public function testIfLoginHasRules()
 	{
 		$this->call('GET', 'login');
-		$this->assertViewHas('rules');
+		$this->assertViewHas('rules');	
+	}
+
+	public function testRedirectLogin()
+	{
 		$this->call('POST','login');
-		$this->assertRedirectedTo('login');
+		$this->assertRedirectedTo('login');		
 	}
 
 }
